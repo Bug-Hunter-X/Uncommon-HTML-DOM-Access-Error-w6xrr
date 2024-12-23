@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Attempting to access a non-existent element before it's added to the DOM
+    document.getElementById("myDiv").innerHTML = "This text won't appear."; 
+    // Correct way to do this would be to add an event listener or put the code within the DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById("myDiv").innerHTML = "This text will appear.";
+    });
+  </script>
+</body>
+</html>
