@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Correct way to add text to the div using DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById("myDiv").innerHTML = "This text will appear.";
+    });
+  </script>
+</body>
+</html>
